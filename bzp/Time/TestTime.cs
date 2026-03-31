@@ -1,4 +1,5 @@
 ﻿using System.Diagnostics;
+using System.Globalization;
 
 namespace bzp;
 
@@ -29,6 +30,6 @@ public class TestTime : ITest
         t2.Join();
 
         sw.Stop();
-        Console.WriteLine($"{sw.Elapsed.TotalMilliseconds:F2}");
+        Console.WriteLine($"{sw.Elapsed.TotalMilliseconds.ToString("F2", new CultureInfo("pl-PL"))}");
     }
 }
