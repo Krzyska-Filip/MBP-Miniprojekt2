@@ -10,30 +10,28 @@ class Program
         ITest a;
         
         Console.WriteLine("Reference Error:");
-        a = new ReferenceError();
-        RunNTimes(a, 5);
+        RunNTimes(new ReferenceError(), 5);
+        
         Console.WriteLine("Fence Error:");
-        a = new FenceError();
-        RunNTimes(a, 5);
+        RunNTimes(new FenceError(), 5);
+        
         Console.WriteLine("Load Error:");
-        a = new LoadError();
-        RunNTimes(a, 5);
+        RunNTimes(new LoadError(), 5);
+        
         Console.WriteLine("Store Error");
-        a = new StoreError();
-        RunNTimes(a, 5);
+        RunNTimes(new StoreError(), 5);
         
         Console.WriteLine("Reference Time:");
-        a = new Reference();
-        RunNTimes(a, 5);
+        RunNTimes(new Reference(), 5);
+        
         Console.WriteLine("Fence Time:");
-        a = new Fence();
-        RunNTimes(a, 5);
+        RunNTimes(new Fence(), 5);
+        
         Console.WriteLine("Load Time:");
-        a = new Load();
-        RunNTimes(a, 5);
+        RunNTimes(new Load(), 5);
+        
         Console.WriteLine("Store Time");
-        a = new Store();
-        RunNTimes(a, 5);
+        RunNTimes(new Store(), 5);
     }
 
     static void RunNTimes(ITest test, int n)
